@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-aniview": "^1.0.4"
+  }
+}
