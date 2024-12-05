@@ -2,14 +2,33 @@
     font-family: uf;
     src: url("uf.ttf");
 }
+* {
+    overflow-x: hidden;
+    scrollbar-width: 0;     /* Set the thickness of the scrollbar in Firefox */
+    /* scrollbar-color: blue transparent;  */
+    ::-webkit-scrollbar {
+        display: none;    /* Hide scrollbars in Webkit browsers */
+    }
+}
 
+::-webkit-scrollbar {
+    display: none;    /* Hide scrollbars in Webkit browsers */
+}
 body {
     background-color: #131212;
     color: white;
     font-family: uf;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    height: 100%
 }
 
+
 .icons {
+    scrollbar-width: none;
+
+    overflow-y: hidden;
+    transition: overflow 0.3s ease-out;
     margin-top: 25px;
     font-size: 4em;
     letter-spacing: 10px;
@@ -21,19 +40,26 @@ body {
 }
 
 .line {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     min-height: 30px;
     min-width: 100%;
     color: white;
 }
 
 .intro {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 30px;
     width: 80%;
-    margin: 7em auto;
+    margin: 5em auto;
+    /* margin-bottom: 0 !important; */
     text-align: center;
 }
 
 .info_packets {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 30px;
     width: 600px;
     /* border: 2px solid wheat; */
@@ -42,16 +68,22 @@ body {
 }
 
 .hello_i_am {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 1.8em;
     margin-bottom: 40px;
 }
 
 .name {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 3em;
     color: rgb(114, 172, 211);
 }
 
 .what_i_am {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     /* margin-top: 30px; */
     font-size: 2em;
     margin-top: 15px;
@@ -59,12 +91,16 @@ body {
 }
 
 .quote {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 0.9em;
     color: rgba(256, 256, 256, 0.7);
     /* margin-bottom: 20px; */
 }
 
 .pc_icon {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     margin-top: 40px;
     font-size: 4em;
     color: rgba(256, 256, 256, 0.7);
@@ -72,29 +108,41 @@ body {
 }
 
 .caption_pc {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     color: rgba(256, 256, 256, 0.7);
-    margin-bottom: 20em;
+    margin-bottom: 3em;
 }
 
 .heading {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     color: rgb(114, 172, 211);
     font-size: 1.8em;
     font-weight: bolder;
+    overflow-y: hidden;
     /* letter-spacing: 2px; */
 }
 
 .iiest {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     margin-top: 30px;
     font-size: 0.85em;
     margin-bottom: 15px;
+    overflow-y: hidden;
 }
 
 .about_me_caption {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 0.8em;
     color: rgba(256, 256, 256, 0.7);
 }
 
 .education_subdiv {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 30px;
     text-align: left;
     max-width: 550px;
@@ -109,24 +157,34 @@ body {
 }
 
 .header_small {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     /* margin-top: 20px; */
     color: rgb(114, 172, 211);
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 5px;
+    overflow-y: hidden;
 }
 
 .header_small_small {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 0.8em;
     margin-bottom: 15px;
+    overflow-y: hidden;
 }
 
 .hs {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 0.8em;
     color: rgba(256, 256, 256, 0.7);
 }
 
 .info_packets_proj {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     /* border: 3px solid white; */
 
     width: fit-content;
@@ -139,6 +197,8 @@ body {
 }
 
 .nft {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     flex: 1;
     user-select: none;
     min-width: 500px;
@@ -270,8 +330,24 @@ body {
 
 
 }
+#scrollTracker {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: transparent;
+}
 
+#scrollProgress {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(114, 172, 211);
+    transition: height 0.3s ease;
+}
 .heading_proj_parent {
+    transition: overflow 0.3s ease-out;
+    overflow-y: hidden;
     font-size: 30px;
     margin: auto;
     margin-top: 10px;
@@ -291,7 +367,11 @@ body {
         letter-spacing: 5px;
         font-size: 1em;
     }
-
+    #scrollTracker{
+        right: unset;
+        left: 0;
+        width: 5px;
+    }
     .line {
         min-height: 15px;
     }
@@ -529,6 +609,6 @@ body {
 }
 
 .reallyslow {
-    animation-duration: 6s;
-    animation-delay: 0.45s;
+    animation-duration: 3s;
+    animation-delay: 1s;
 }
