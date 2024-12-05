@@ -295,14 +295,19 @@ body {
     .line {
         min-height: 15px;
     }
-
+    .heading_proj_parent{
+        font-size: 40px;
+    }
     .info_packets {
+        /* text-align: left; */
+        font-size: 40px;
         /* min-width: 450px; */
         max-width: 400px;
         margin: 10em auto;
     }
 
     .info_packets_proj {
+        /* text-align: left; */
         /* min-width: 450px; */
         max-width: 400px;
     }
@@ -332,7 +337,7 @@ body {
     }
 
     .iiest {
-        text-align: center;
+        /* text-align: left; */
         max-width: 300px;
         margin: auto;
         margin-top: 15px;
@@ -341,6 +346,7 @@ body {
     }
 
     .about_me_caption {
+        /* text-align: left; */
         font-size: 0.5em;
         /* margin-top: 10px; */
         color: rgba(256, 256, 256, 0.7);
@@ -361,9 +367,13 @@ body {
     }
 
     .education_subdiv {
+        font-size: 40px;
         margin-top: 20px;
         min-width: unset;
         max-width: fit-content;
+    }
+    .icons{
+        font-size: 2em;
     }
 
 }
@@ -371,7 +381,7 @@ body {
 @media screen and (max-width: 500px) {
     .icons {
         margin-top: 25px;
-        font-size: 3.5em;
+        font-size: 2.7em;
         letter-spacing: 10px;
     }
 
