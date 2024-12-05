@@ -252,5 +252,72 @@
         });
     });
 </script>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+    let isScrolling = false; // To throttle scrolling actions
+    let lastTouchY = 0; // For touch gesture handling
 
+    // Smooth scroll function
+    function slowScroll(amount) {
+        if (isScrolling) return; // Prevent multiple scroll triggers
+        isScrolling = true;
+
+        // Scroll by the given amount
+        window.scrollBy({
+            top: amount,
+            behavior: "smooth",
+        });
+
+        // Allow further scrolling after animation
+        setTimeout(() => {
+            isScrolling = false;
+        }, 500); // Adjust timeout for smoother control
+    }
+
+    // Handle mouse wheel scrolling
+    document.addEventListener(
+        "wheel",
+        (event) => {
+            event.preventDefault(); // Prevent default scrolling behavior
+
+            const scrollAmount = event.deltaY > 0 ? 500 : -500; // Adjust scrolling step here
+            slowScroll(scrollAmount);
+        },
+        { passive: false }
+    );
+
+    // Handle keyboard arrow keys
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+            event.preventDefault(); // Prevent default scrolling behavior
+
+            const scrollAmount = event.key === "ArrowDown" ? 500 : -500; // Adjust scrolling step here
+            slowScroll(scrollAmount);
+        }
+    });
+
+    // Handle mobile touch gestures
+    document.addEventListener(
+        "touchstart",
+        (event) => {
+            lastTouchY = event.touches[0].clientY; // Record the initial touch position
+        },
+        { passive: true }
+    );
+
+    document.addEventListener(
+        "touchmove",
+        (event) => {
+            event.preventDefault(); // Prevent default touch scrolling
+
+            const currentTouchY = event.touches[0].clientY;
+            const scrollAmount = (lastTouchY - currentTouchY) / 0.04; // Adjust divisor for touch sensitivity
+            slowScroll(scrollAmount);
+
+            lastTouchY = currentTouchY; // Update the last touch position
+        },
+        { passive: false }
+    );
+});
+</script>
 </html>
