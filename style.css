@@ -10,7 +10,7 @@
 
 * {
     overflow-x: hidden;
-    scrollbar-width: 0;
+    scrollbar-width: none;
     /* Set the thickness of the scrollbar in Firefox */
 
 }
