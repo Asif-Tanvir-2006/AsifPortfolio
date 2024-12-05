@@ -46,6 +46,10 @@ body {
 .icons-social {
     letter-spacing: 10px;
     font-size: 2em;
+    pointer-events: all;
+}
+.icons-social:hover{
+    cursor: pointer !important;
 }
 
 .line {
