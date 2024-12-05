@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-aniview/dist/jquery.aniview.min.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
 </head>
 
@@ -54,15 +53,15 @@
             my desktop—I like that too. :p</div>
     </div>
     <div class="info_packets">
-        <div class="heading aniview" data-av-animation="animate__bounceInRight">
+        <div class="heading aniview" data-av-animation="animate__fadeInRight">
              EDUCATION
         </div>
         <div class="education_subdiv">
-            <div class="header_small aniview" data-av-animation="animate__bounceInUp">
+            <div class="header_small aniview" data-av-animation="animate__fadeInLeft">
                 Higher Secondary
 
             </div>
-            <div class="header_small_small aniview" data-av-animation="animate__bounceInUp">
+            <div class="header_small_small aniview" data-av-animation="animate__fadeIn">
                 Delhi Public School, Burdwan
             </div>
             <div class="hs aniview reallyslow" data-av-animation="animate__fadeIn">
@@ -70,11 +69,11 @@
                 Completed 10th (2022) with 96.6%
             </div>
             <div class="line"></div>
-            <div class="header_small aniview" data-av-animation="animate__bounceInUp">
+            <div class="header_small aniview" data-av-animation="animate__fadeInLeft">
                 B.Tech in Information Technology
 
             </div>
-            <div class="header_small_small aniview" data-av-animation="animate__bounceInUp">
+            <div class="header_small_small aniview" data-av-animation="animate__fadeIn">
                 IIEST, Shibpur (formerly BESU)
             </div>
             <div class="hs aniview reallyslow" data-av-animation="animate__fadeIn">
@@ -256,7 +255,7 @@
     });
 </script>
 <script>
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPosition = window.scrollY;
         const scrollProgress = (scrollPosition / scrollHeight) * 100;
