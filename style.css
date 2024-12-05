@@ -19,6 +19,10 @@
     pointer-events: none;
 }
 
+.heading_proj_parent {
+    pointer-events: none;
+}
+
 body {
     background-color: #131212;
     color: white;
