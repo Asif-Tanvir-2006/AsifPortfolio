@@ -48,7 +48,7 @@ body {
     font-size: 2em;
     pointer-events: all;
 }
-.icons-social:hover{
+.icons-social a:hover{
     cursor: pointer !important;
 }
 
