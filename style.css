@@ -629,6 +629,6 @@ body {
 }
 
 .reallyslow {
-    animation-duration: 3s;
-    animation-delay: 1s;
+    /* animation-duration: 1s; */
+    /* animation-delay: 0s; */
 }
